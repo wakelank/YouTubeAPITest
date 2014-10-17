@@ -26,9 +26,10 @@ $(document).ready(){
 
   // Search for a specified string.
   function search() {
-    var key = AIzaSyAZmS8dNMoMr1z9uVifisN-hv6PbMC3cqc;
+    var key = 'AIzaSyAZmS8dNMoMr1z9uVifisN-hv6PbMC3cqc';
     var q = $('#query').val();
     var request = gapi.client.youtube.search.list({
+      key: key,
       q: q,
       part: 'snippet'
     });
