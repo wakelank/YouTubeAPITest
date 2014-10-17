@@ -18,7 +18,7 @@
   <script src="https://apis.google.com/js/client.js?onload=handleAPILoaded"></script>
   <script>
 // After the API loads, call a function to enable the search box.
-$(document).ready(){
+$(document).ready(function(){
   function handleAPILoaded() {
     $('#search-button').attr('disabled', false);
     console.log("loaded");
@@ -38,7 +38,7 @@ $(document).ready(){
       var str = JSON.stringify(response.result);
       $('#search-container').html('<pre>' + str + '</pre>');
     });
-  }
+  });
 }
   </script>
   </body>
